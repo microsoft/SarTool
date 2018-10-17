@@ -1,27 +1,26 @@
 # SarTool
 SarTool uses public Windows API's to control SAR state in WLAN (Wi-Fi) and LTE subsystems.
 
-[TOC]
-
-##Build the Project
-- [ ]install an SDK version 17134 or later<br>
+## Build the Project
+- [ ] install WDK version 1809 or later<br>
 **-OR-**
-- [ ]use an EWDK to LaunchBuildEnv.bat and SetupVSEnv
-- [ ]open Visual Studio from that cmd.exe
+- [ ] use an EWDK to LaunchBuildEnv.bat and SetupVSEnv
+- [ ] open Visual Studio from that cmd.exe
  >**NOTE:** If building in Visual Studio does not work (it's not yet fully supported from EWDK), use a command line like the following:
   msbuild /t:rebuild SarTool.sln /p:configuration=debug /p:platform=arm64 /property:WindowsTargetPlatformVersion=%Version_Number%
 
-##Example Commands
+## Example Commands
 `sartool getsar wifi`<br>
 `sartool setsar wifi off`<br>
 `sartool setsar WiFi on 0x3 0xff 2`<br>
 
-##Files
+## Files
 | File      |    Contents  |
 | :-------- | :----------- |
 | Dmf_Wlan_Public.h | contains struct and value definitions shared between SurfaceSarManager.dll and an IHV’s WLAN driver |
 | Wlan_Ihv_Config.h | contains struct and value definitions provisioned by the OEM but otherwise only read by the IHV’s WLAN driver |
-##UEFI GUID and variable names
+
+## UEFI GUID and variable names
 <table>
   <tr>
     <td><b>GUID</b></td>
@@ -56,7 +55,7 @@ SarTool uses public Windows API's to control SAR state in WLAN (Wi-Fi) and LTE s
   </tr>
 </table>
 
-##See also
+## See also
 The document that describes the format of SarTool.exe payloads is WLAN_SAR_IHV_DOC.
 Inside the document a Revision History table indicates the version (e.g. 1.3).<br>
 The version numbers in Wlan_Ihv_Config.h and Dmf_Wlan_Public.h will kept in sync with the document’s version (revisions of a given version should not alter struct formats or contain other “material” changes.)<br>

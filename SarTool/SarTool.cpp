@@ -95,7 +95,7 @@ Return Value:
 
     S_OK on success or underlying failure code.
 
-–*/
+â€“*/
 {
     HANDLE           hToken = NULL;
     TOKEN_PRIVILEGES tokenPrivileges = { 0 };
@@ -152,7 +152,7 @@ Return Value:
 
     VOID
 
-–*/
+â€“*/
 {
     LPWSTR messageBuffer;
 
@@ -167,11 +167,7 @@ Return Value:
                   NULL);
 
     printf("%S", messageBuffer);
-
-    if (messageBuffer)
-    {
-        LocalFree(messageBuffer);
-    }
+    LocalFree(messageBuffer);
 }
 
 HRESULT
@@ -192,7 +188,7 @@ Return Value:
 
     S_OK on success or underlying failure code.
 
-–*/
+â€“*/
 {
     HRESULT hr = S_OK;
 
@@ -371,7 +367,7 @@ Return Value:
 
     S_OK on success or underlying failure code.
 
-–*/
+â€“*/
 {
     HRESULT hr = S_OK;
     SAR_CONFIG_HEADER sarConfigHeader = { 0 };
@@ -598,7 +594,7 @@ Return Value:
 
     VOID
 
-–*/
+â€“*/
 {
     WCHAR szGuid[39] = { 0 };
 
@@ -641,7 +637,7 @@ Return Value:
 
     S_OK on success or underlying failure code.
 
-–*/
+â€“*/
 {
     HRESULT hr = S_OK;
 
@@ -859,7 +855,7 @@ Return Value:
 
     S_OK on success or underlying failure code.
 
-–*/
+â€“*/
 {
     HRESULT hr = S_OK;
 
@@ -968,7 +964,7 @@ Return Value:
 
     S_OK on success or underlying failure code.
 
-–*/
+â€“*/
 {
 #if (NTDDI_WIN10_RS5 && (NTDDI_VERSION >= NTDDI_WIN10_RS5))
     DWORD i;
@@ -1021,7 +1017,7 @@ Return Value:
 
     S_OK on success or underlying failure code.
 
-–*/
+â€“*/
 {
     DWORD nReturnVal = 0;
 #if (NTDDI_WIN10_RS5 && (NTDDI_VERSION >= NTDDI_WIN10_RS5))
@@ -1089,7 +1085,7 @@ Return Value:
 
     S_OK on success or underlying failure code.
 
-–*/
+â€“*/
 {
     HRESULT hr = S_OK;
 
@@ -1156,7 +1152,7 @@ Return Value:
 
     String containing the version number of SarTool.exe.
 
-–*/
+â€“*/
 {
     TCHAR *pRet = NULL;
     UCHAR *pBuffer = NULL;
@@ -1234,7 +1230,7 @@ Return Value:
 
     VOID
 
-–*/
+â€“*/
 {
     TCHAR* pVer = GetVersionInfo();
     printf("\n\n %s version %ws\n\n",
@@ -1293,7 +1289,7 @@ Return Value:
     0 on success
     non-zero to indicate a failure
 
-–*/
+â€“*/
 {
     HRESULT hr = S_OK;
     int nReturnVal = 1;
